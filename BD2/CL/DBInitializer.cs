@@ -38,6 +38,12 @@ namespace BD2.CL
                 new Empleado{Nombre="N3", Apellido="A3", Edad=24,TipoEmpleadoID=2},
                 new Empleado{Nombre="N4", Apellido="A4", Edad=19,TipoEmpleadoID=3},
             };
+
+            foreach (Empleado e in empleados)
+            {
+                context.Empleados.Add(e);
+            }
+            context.SaveChanges();
         }
 
         

@@ -2,7 +2,6 @@ c:\users\user\documents\visual studio 2017\Projects\BD2\BD2\bin\Debug\netcoreapp
 c:\users\user\documents\visual studio 2017\Projects\BD2\BD2\bin\Debug\netcoreapp1.1\BD2.runtimeconfig.json
 c:\users\user\documents\visual studio 2017\Projects\BD2\BD2\bin\Debug\netcoreapp1.1\BD2.runtimeconfig.dev.json
 c:\users\user\documents\visual studio 2017\Projects\BD2\BD2\bin\Debug\netcoreapp1.1\BD2.dll
-c:\users\user\documents\visual studio 2017\Projects\BD2\BD2\obj\Debug\netcoreapp1.1\BD2.csprojResolveAssemblyReference.cache
 c:\users\user\documents\visual studio 2017\Projects\BD2\BD2\obj\Debug\netcoreapp1.1\BD2.AssemblyInfo.cs
 c:\users\user\documents\visual studio 2017\Projects\BD2\BD2\bin\Debug\netcoreapp1.1\BD2.pdb
 c:\users\user\documents\visual studio 2017\Projects\BD2\BD2\obj\Debug\netcoreapp1.1\BD2.dll
