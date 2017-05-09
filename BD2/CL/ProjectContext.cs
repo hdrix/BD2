@@ -14,13 +14,24 @@ namespace BD2.CL
 
         public DbSet<TipoEmpleado> TipoEmpleados { get; set; }
         public DbSet<Empleado> Empleados { get; set; }
-
-
+        public DbSet<TipoEstado> TipoEstado { get; set; }
+        public DbSet<Estado> Estado { get; set; }
+        public DbSet<Horario> Horario { get; set; }
+        public DbSet<Bus> Bus { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<TipoEmpleado>().ToTable("TipoEmpleado");
             modelBuilder.Entity<Empleado>().ToTable("Empleado");
+            modelBuilder.Entity<TipoEstado>().ToTable("TipoEstado");
+            modelBuilder.Entity<Estado>().ToTable("Estado");
+            modelBuilder.Entity<Horario>().ToTable("Horario");
+            modelBuilder.Entity<Bus>().ToTable("Horario");
 
         }
+
+        
+
+
+        
     }
 }
