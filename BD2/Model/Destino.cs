@@ -11,9 +11,5 @@ namespace BD2.Model
         public string Nombre { get; set; }
         public string Salida { get; set; }
 
-<<<<<<< HEAD
-=======
-        public Estado Estado { get; set; }
->>>>>>> 460e55d6493c502f2e1620c511684e27bd784bea
     }
 }

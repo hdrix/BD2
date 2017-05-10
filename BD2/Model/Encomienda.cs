@@ -12,10 +12,6 @@ namespace BD2.Model
         public string Nombre { get; set; }
         public string Descrip { get; set; }
 
-<<<<<<< HEAD
        
-=======
-        public ICollection<Estado> Estados { get; set; }
->>>>>>> 460e55d6493c502f2e1620c511684e27bd784bea
     }
 }
