@@ -18,6 +18,7 @@ namespace BD2.CL
         public DbSet<Estado> Estado { get; set; }
         public DbSet<Horario> Horario { get; set; }
         public DbSet<Bus> Bus { get; set; }
+<<<<<<< HEAD
         public DbSet<Encomienda> Encomienda { get; set; }
         public DbSet<EncomiendaBus> EncomiendaBus { get; set; }
         public DbSet<Destino> Destino { get; set; }
@@ -31,6 +32,8 @@ namespace BD2.CL
         //public DbSet<BusDestino> BusDestino { get; set; }
 
 
+=======
+>>>>>>> 460e55d6493c502f2e1620c511684e27bd784bea
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<TipoEmpleado>().ToTable("TipoEmpleado");
@@ -38,6 +41,7 @@ namespace BD2.CL
             modelBuilder.Entity<TipoEstado>().ToTable("TipoEstado");
             modelBuilder.Entity<Estado>().ToTable("Estado");
             modelBuilder.Entity<Horario>().ToTable("Horario");
+<<<<<<< HEAD
             modelBuilder.Entity<Bus>().ToTable("Bus");
             modelBuilder.Entity<Encomienda>().ToTable("Encomienda");
             modelBuilder.Entity<EncomiendaBus>().ToTable("EncomiendaBus");
@@ -56,5 +60,15 @@ namespace BD2.CL
         public DbSet<BD2.Model.BusDestinos> BusDestinos { get; set; }
 
 
+=======
+            modelBuilder.Entity<Bus>().ToTable("Horario");
+
+        }
+
+        
+
+
+        
+>>>>>>> 460e55d6493c502f2e1620c511684e27bd784bea
     }
 }
