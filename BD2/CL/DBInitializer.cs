@@ -11,6 +11,7 @@ namespace BD2.CL
         public static void Initialize(ProjectContext context)
         {
             context.Database.EnsureCreated();
+            //context.BusDestino
 
             if (context.TipoEmpleados.Any())
             {

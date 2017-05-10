@@ -22,6 +22,14 @@ namespace BD2.CL
         public DbSet<EncomiendaBus> EncomiendaBus { get; set; }
         public DbSet<Destino> Destino { get; set; }
         public DbSet<Cliente> Cliente { get; set; }
+        public DbSet<ClienteEncomienda> ClienteEncomienda { get; set; }
+
+        public DbSet<Passwords> Passwords { get; set; }
+
+        public DbSet<BusEmpleado> BusEmpleado { get; set; }
+
+        //public DbSet<BusDestino> BusDestino { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -36,10 +44,14 @@ namespace BD2.CL
             modelBuilder.Entity<Cliente>().ToTable("Cliente");
             modelBuilder.Entity<Destino>().ToTable("Destino");
 
+            modelBuilder.Entity<ClienteEncomienda>().ToTable("ClienteEncomienda");
+            modelBuilder.Entity<Passwords>().ToTable("Passwords");
+            modelBuilder.Entity<BusEmpleado>().ToTable("BusEmpleado");
+            //modelBuilder.Entity<BusDestino>().ToTable("BusDestino");
+
         }
 
-        public DbSet<BD2.Model.ClienteEncomienda> ClienteEncomienda { get; set; }
-
+        
         
         
         
