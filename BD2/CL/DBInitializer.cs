@@ -32,6 +32,8 @@ namespace BD2.CL
             }
             context.SaveChanges();
 
+            
+
             var empleados = new Empleado[]
             {
                 new Empleado{Nombre="N1", Apellido="A1", Edad=30,TipoEmpleadoID=1},
@@ -89,6 +91,130 @@ namespace BD2.CL
             foreach (TipoEstado ties in tipoEstado)
             {
                 context.TipoEstado.Add(ties);
+            }
+            context.SaveChanges();
+
+            var bus = new Bus[]
+           {
+                new Bus{Nombre="bus1", pasajeros=45},
+                new Bus{Nombre="bus2", pasajeros=35},
+                new Bus{Nombre="bus3", pasajeros=15},
+                new Bus{Nombre="bus4", pasajeros=25},
+                new Bus{Nombre="bus5", pasajeros=55}
+           };
+
+            foreach (Bus bu in bus)
+            {
+                context.Bus.Add(bu);
+            }
+            context.SaveChanges();
+
+            //DESTINO
+            var destino = new Destino[]
+          {
+                new Destino{Nombre="destino1",Salida="Peten" },
+                new Destino{Nombre="destino2",Salida="Coban" },
+                new Destino{Nombre="destino3",Salida="Izabal" },
+                new Destino{Nombre="destino4",Salida="Huehuetenango" },
+                new Destino{Nombre="destino5",Salida="Quiche" }
+          };
+
+            foreach (Destino destin in destino)
+            {
+                context.Destino.Add(destin);
+            }
+            context.SaveChanges();
+
+            //CLIENTE
+            var cliente = new Cliente[]
+          {
+                new Cliente{ nombre="Eduardito", Descrip="Descrip 1"},
+                new Cliente{ nombre="Andresito", Descrip="Descrip 2"},
+                new Cliente{ nombre="Tambito", Descrip="Descrip 3"},
+                new Cliente{ nombre="Danielito", Descrip="Descrip 4"},
+                new Cliente{ nombre="Emilito", Descrip="Descrip 5"}
+          };
+
+            foreach (Cliente client in cliente)
+            {
+                context.Cliente.Add(client);
+            }
+            context.SaveChanges();
+
+            var estado = new Estado[]
+            {
+                new Estado{Descrip="Descrip 1", Nombre="N1", TipoEstadoID=1},
+                new Estado{Descrip="Descrip 2", Nombre="N2", TipoEstadoID=1},
+                new Estado{Descrip="Descrip 3", Nombre="N3", TipoEstadoID=3},
+                new Estado{Descrip="Descrip 4", Nombre="N4", TipoEstadoID=1},
+                new Estado{Descrip="Descrip 5", Nombre="N5", TipoEstadoID=2},
+            };
+
+            foreach (Estado ties in estado)
+            {
+                context.Estado.Add(ties);
+            }
+            context.SaveChanges();
+
+            var encomiendaBus = new EncomiendaBus[]
+            {
+                new EncomiendaBus{BusID=1,EncomiendaID=2,EstadoID=1},
+                new EncomiendaBus{BusID=3,EncomiendaID=2,EstadoID=1},
+                new EncomiendaBus{BusID=2,EncomiendaID=1,EstadoID=2},
+                new EncomiendaBus{BusID=1,EncomiendaID=3,EstadoID=3},
+                new EncomiendaBus{BusID=4,EncomiendaID=1,EstadoID=2},
+            };
+
+            foreach (EncomiendaBus ties in encomiendaBus)
+            {
+                context.EncomiendaBus.Add(ties);
+            }
+            context.SaveChanges();
+
+            var clienteEncomienda = new ClienteEncomienda[]
+            {
+                new ClienteEncomienda{Fecha=new DateTime(2013, 12, 01), ClienteID=1,EncomiendaID=2,EstadoID=1},
+                new ClienteEncomienda{Fecha=new DateTime(2010, 03, 12), ClienteID=2,EncomiendaID=3,EstadoID=1},
+                new ClienteEncomienda{Fecha=new DateTime(2009, 07, 11), ClienteID=3,EncomiendaID=2,EstadoID=2},
+                new ClienteEncomienda{Fecha=new DateTime(2011, 11, 09), ClienteID=4,EncomiendaID=3,EstadoID=1},
+                new ClienteEncomienda{Fecha=new DateTime(2012, 01, 02), ClienteID=5,EncomiendaID=1,EstadoID=3},
+            };
+
+            foreach (ClienteEncomienda ties in clienteEncomienda)
+            {
+                context.ClienteEncomienda.Add(ties);
+            }
+            context.SaveChanges();
+
+            var horario = new Horario[]
+            {
+                new Horario{inicial=new TimeSpan(12,24,23), final = new TimeSpan(14,32,20), EstadoID = 1},
+                new Horario{inicial=new TimeSpan(8,11,12), final = new TimeSpan(19,05,01), EstadoID = 4},
+                new Horario{inicial=new TimeSpan(13,03,45), final = new TimeSpan(21,19,45), EstadoID = 2},
+                new Horario{inicial=new TimeSpan(06,45,06), final = new TimeSpan(10,01,10), EstadoID = 3},
+                new Horario{inicial=new TimeSpan(10,56,14), final = new TimeSpan(18,56,59), EstadoID = 1},
+            };
+
+            foreach (Horario ties in horario)
+            {
+                context.Horario.Add(ties);
+            }
+            context.SaveChanges();
+
+            // BUS DESTINO
+
+            var busdestino = new BusDestinos[]
+           {
+                new BusDestinos{BusID=1,DestinoID=5,HorarioID=1,Estado="1"},
+                new BusDestinos{BusID=2,DestinoID=4,HorarioID=1,Estado="1"},
+                new BusDestinos{BusID=3,DestinoID=3,HorarioID=1,Estado="1"},
+                new BusDestinos{BusID=4,DestinoID=2,HorarioID=1,Estado="1"},
+                new BusDestinos{BusID=5,DestinoID=1,HorarioID=1,Estado="1"}
+           };
+
+            foreach (BusDestinos budesti in busdestino)
+            {
+                context.BusDestinos.Add(budesti);
             }
             context.SaveChanges();
         }
