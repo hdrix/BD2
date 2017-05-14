@@ -4,6 +4,15 @@ Login
 		-Empleados
 		-PasswordsEmpleados
 
+	crear el modelo para administrar las sesiones
+	 con los siguientes campos
+	 -id
+	 -activo (int)
+	 -EmpleadoID
+
+	 agregarlo al ProjectContext
+	 y a partir de ello crear el controller
+
 --Menu Administrativo
 	un meno en dondes aparezcan las opciones 
 	de todos los modelos para administrarlos
