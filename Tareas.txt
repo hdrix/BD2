@@ -1,0 +1,30 @@
+Login
+	Tablas
+		-Passwords
+		-Empleados
+		-PasswordsEmpleados
+
+--Menu Administrativo
+	un meno en dondes aparezcan las opciones 
+	de todos los modelos para administrarlos
+
+
+--Venta de Boletos
+	
+	--crear el modelo del ticket 
+		--id
+		--EmpleadoID
+		--nombreCliente
+		--FechaCreacion
+		--estado (String)--> es un campo, NO FORANEA
+		--BusID
+
+	formulario normal con los siguientes camposs
+	-nombre de quien opera (en la sesion)
+	-nombre de cliente
+	-bus a tomar(en los horarios disponibles)
+	-si es solo de ida o tambien de vuelta
+	-en caso de comprar ida y vuelta deslplegar los
+	buses disponibles con destido que se desea
+	-- antes de los combobox de los buses desplegar el de destinos para 
+	poder filtrar los buses respecto a ello

@@ -48,12 +48,14 @@ namespace BD2.CL
             modelBuilder.Entity<Passwords>().ToTable("Passwords");
             modelBuilder.Entity<BusEmpleado>().ToTable("BusEmpleado");
             modelBuilder.Entity<BusDestinos>().ToTable("BusDestinos");
+            modelBuilder.Entity<PasswordEmpleados>().ToTable("PasswordEmpleados");
             //modelBuilder.Entity<BusDestino>().ToTable("BusDestino");
 
         }
 
 
         public DbSet<BD2.Model.BusDestinos> BusDestinos { get; set; }
+            public DbSet<BD2.Model.PasswordEmpleados> PasswordEmpleados { get; set; }
 
 
     }

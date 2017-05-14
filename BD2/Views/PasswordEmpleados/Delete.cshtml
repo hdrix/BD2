@@ -1,0 +1,47 @@
+@model BD2.Model.PasswordEmpleados
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PasswordEmpleados</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <input type="hidden" asp-for="ID" />
+        <dt>
+            @Html.DisplayNameFor(model => model.enable)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.enable)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha_Modificado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.fecha_Modificado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Empleado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Empleado.ID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Passwords)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Passwords.ID)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>

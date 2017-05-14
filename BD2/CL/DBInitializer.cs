@@ -96,11 +96,11 @@ namespace BD2.CL
 
             var bus = new Bus[]
            {
-                new Bus{Nombre="bus1", pasajeros=45},
-                new Bus{Nombre="bus2", pasajeros=35},
-                new Bus{Nombre="bus3", pasajeros=15},
-                new Bus{Nombre="bus4", pasajeros=25},
-                new Bus{Nombre="bus5", pasajeros=55}
+                new Bus{Nombre="bus1", pasajeros=20},
+                new Bus{Nombre="bus2", pasajeros=30},
+                new Bus{Nombre="bus3", pasajeros=50},
+                new Bus{Nombre="bus4", pasajeros=20},
+                new Bus{Nombre="bus5", pasajeros=30}
            };
 
             foreach (Bus bu in bus)
@@ -215,6 +215,23 @@ namespace BD2.CL
             foreach (BusDestinos budesti in busdestino)
             {
                 context.BusDestinos.Add(budesti);
+            }
+            context.SaveChanges();
+
+            // BUS DESTINO
+
+            var passwordEmpleados = new PasswordEmpleados[]
+           {
+                new PasswordEmpleados{PasswordsID=1,EmpleadoID=1,enable=1,fecha_Modificado=new DateTime(2014,04,27)},
+                new PasswordEmpleados{PasswordsID=2,EmpleadoID=2,enable=1,fecha_Modificado=new DateTime(2014,04,27)},
+                new PasswordEmpleados{PasswordsID=3,EmpleadoID=3,enable=1,fecha_Modificado=new DateTime(2014,04,27)},
+                new PasswordEmpleados{PasswordsID=4,EmpleadoID=4,enable=1,fecha_Modificado=new DateTime(2014,04,27)},
+
+           };
+
+            foreach (PasswordEmpleados pe in passwordEmpleados)
+            {
+                context.PasswordEmpleados.Add(pe);
             }
             context.SaveChanges();
         }
