@@ -27,6 +27,7 @@ namespace BD2.CL
         public DbSet<Passwords> Passwords { get; set; }
 
         public DbSet<BusEmpleado> BusEmpleado { get; set; }
+        public DbSet<BusEncomienda> BusEncomienda { get; set; }
 
         //public DbSet<BusDestino> BusDestino { get; set; }
 
@@ -49,6 +50,8 @@ namespace BD2.CL
             modelBuilder.Entity<BusEmpleado>().ToTable("BusEmpleado");
             modelBuilder.Entity<BusDestinos>().ToTable("BusDestinos");
             modelBuilder.Entity<PasswordEmpleados>().ToTable("PasswordEmpleados");
+            modelBuilder.Entity<BusEncomienda>().ToTable("BusEncomienda");
+            modelBuilder.Entity<LugaresBus>().ToTable("LugaresBus");
             //modelBuilder.Entity<BusDestino>().ToTable("BusDestino");
 
         }
@@ -56,6 +59,7 @@ namespace BD2.CL
 
         public DbSet<BD2.Model.BusDestinos> BusDestinos { get; set; }
             public DbSet<BD2.Model.PasswordEmpleados> PasswordEmpleados { get; set; }
+            public DbSet<BD2.Model.LugaresBus> LugaresBus { get; set; }
 
 
     }
